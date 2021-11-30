@@ -17,6 +17,7 @@ const config = {
 		paths: {
 			base: dev ? '' : '/slides'
 		},
+		appDir: 'internal',
 		adapter: adapter({
 			pages: 'docs',
 			assets: 'docs'
