@@ -10,17 +10,17 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-8b07cdb6.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-b29ded78.js">
-		<link rel="modulepreload" href="/_app/layout.svelte-e17bde5d.js">
-		<link rel="modulepreload" href="/_app/pages/index.svelte-01be963f.js">
-		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="modulepreload" href="/slides/_app/start-f1eee6aa.js">
+		<link rel="modulepreload" href="/slides/_app/chunks/vendor-b29ded78.js">
+		<link rel="modulepreload" href="/slides/_app/layout.svelte-e17bde5d.js">
+		<link rel="modulepreload" href="/slides/_app/pages/index.svelte-01be963f.js">
+		<link rel="stylesheet" href="/slides/_app/assets/start-61d1577b.css">
 
 		<script type="module">
-			import { start } from "/_app/start-8b07cdb6.js";
+			import { start } from "/slides/_app/start-f1eee6aa.js";
 			start({
 				target: document.querySelector("#svelte"),
-				paths: {"base":"","assets":""},
+				paths: {"base":"/slides","assets":""},
 				session: {},
 				host: location.host,
 				route: true,
@@ -30,8 +30,8 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/layout.svelte-e17bde5d.js"),
-						import("/_app/pages/index.svelte-01be963f.js")
+						import("/slides/_app/layout.svelte-e17bde5d.js"),
+						import("/slides/_app/pages/index.svelte-01be963f.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
