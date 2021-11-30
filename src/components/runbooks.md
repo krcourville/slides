@@ -15,7 +15,7 @@ A runbook can fullfill at least a few goals:
 
 ### Caveats
 
-* Only accessible users of [git.yale.edu](git.yale.edu)
+* Only accessible users of `git.yale.edu`.
 * Maybe should be accessible devs and possibly also ITS personal, at least, in a read-only view.
 * Should be discoverable to enable people to fund services they can use or reuse ideas from.
 * Commonly used features such as table of content and tables can be cumbersome using Github Wiki.  Use of VS Code and extensions is helpful, but a more fully-featured browser-based GUI is ideal

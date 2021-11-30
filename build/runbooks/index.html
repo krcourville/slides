@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="" />
+	<link rel="icon" href="/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+
+		
+
+		<link rel="modulepreload" href="/_app/start-8b07cdb6.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-b29ded78.js">
+		<link rel="modulepreload" href="/_app/layout.svelte-e17bde5d.js">
+		<link rel="modulepreload" href="/_app/pages/runbooks.svelte-bc7e852d.js">
+		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/_app/assets/pages/runbooks.svelte-942db262.css">
+
+		<script type="module">
+			import { start } from "/_app/start-8b07cdb6.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/layout.svelte-e17bde5d.js"),
+						import("/_app/pages/runbooks.svelte-bc7e852d.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "\u002Frunbooks",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+	<div id="svelte" class="container">
+
+
+<div class="slideshow svelte-yw4lvu"><div class="d-flex btn-group mt-5 mb-5" role="group" aria-label="Slideshow Controls"><button class="btn btn-primary">&lt; Previous</button>
+		<button class="btn btn-primary">Next &gt;</button></div>
+	<div class="slides"><h1>Runbooks Discussion</h1>
+<h2>Why?</h2>
+<p>A runbook can fullfill at least a few goals:</p>
+<ol><li>Identify the existence of a service, why it was created, how it was implemented, and how to use it.</li>
+<li>Document the infrastructure of a service.</li>
+<li>Identity how to maintain the service.</li>
+<li>Serve as a starting point for troubleshooting incidents and allowing personnel to uninterrupted vacations.</li></ol>
+<h2>Demo</h2>
+<p><a href="https://git.yale.edu/Library-IT/Aeon_Identity_Provider/wiki/Runbook" rel="nofollow">Runbook for Aeon_Identity_Provider</a></p>
+<h3>Caveats</h3>
+<ul><li>Only accessible users of <code>git.yale.edu</code>.</li>
+<li>Maybe should be accessible devs and possibly also ITS personal, at least, in a read-only view.</li>
+<li>Should be discoverable to enable people to fund services they can use or reuse ideas from.</li>
+<li>Commonly used features such as table of content and tables can be cumbersome using Github Wiki.  Use of VS Code and extensions is helpful, but a more fully-featured browser-based GUI is ideal</li></ul>
+<h2>Recommendations</h2>
+<ul><li>DO: Put runbooks in a discoverable, accessible location, ideally in an organized directory of services.</li>
+<li>DO: Ensure runbooks are easy to contribute to and do not require extra tools to do so.</li>
+<li>DO NOT: Try to over-standardize the contents of a runbook.  Every service and team is different.</li>
+<li>DO: Offer a starting template.</li>
+<li>DO: Offer a checklist of items to consider for a runbook.</li>
+<li>DO NOT: Think that all documentation MUST go into a Runbook.</li>
+<li>DO: Link references to other documentation sources such as the source repo(s), api documentation.</li>
+<li>DO NOT: Put secrets in runbooks.</li>
+<li>DO: Include “runbook is updated” in acceptance criteria.</li>
+<li>DO: Include a table of contents that allows linking to specific topics in a runbook (unless the runbook is trivial).</li></ul>
+<h2>References</h2>
+<ul><li><a href="https://www.pagerduty.com/resources/learn/what-is-a-runbook/" rel="nofollow">https://www.pagerduty.com/resources/learn/what-is-a-runbook/</a></li>
+<li><a href="https://www.fool.com/the-blueprint/runbook/" rel="nofollow">https://www.fool.com/the-blueprint/runbook/</a></li>
+<li><a href="https://wa.aws.amazon.com/wat.concept.runbook.en.html" rel="nofollow">https://wa.aws.amazon.com/wat.concept.runbook.en.html</a></li></ul></div>
+</div>
+
+
+
+			
+		</div>
+</body>
+
+</html>
