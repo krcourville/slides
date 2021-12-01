@@ -1,48 +1,20 @@
 <script lang="ts">
-	import { onMount, SvelteComponent } from 'svelte';
+	import { onMount } from 'svelte';
 
-	export let presentation: SvelteComponent;
+	export let presentation: HTMLDivElement[] = [];
 
-	const SLIDE_BREAKS = ['H1', 'H2'];
-
-	let slides: HTMLDivElement;
-	let currentSlide = 0;
-	let slideCount = 0;
-	let nodes: HTMLElement[] = [];
+	let slideView: HTMLDivElement[] = [];
+	let currentSlide = 1;
 	let prevDisabled = true;
 	let nextDisabled = true;
 
 	$: {
-		if (!(slides && slides.children)) {
-			nodes = [];
-			prevDisabled = true;
-			nextDisabled = true;
-		} else {
-			nodes = Array.from(slides.children).filter(
-				(node: HTMLElement) => node.nodeType === node.ELEMENT_NODE
-			) as HTMLElement[];
-		}
+		prevDisabled = currentSlide === 1;
+		nextDisabled = currentSlide === presentation.length;
 	}
 
 	$: {
-		prevDisabled = currentSlide === 0;
-		nextDisabled = currentSlide === slideCount - 1;
-	}
-
-	$: {
-		let cursor = -1;
-		nodes.forEach((node) => {
-			if (SLIDE_BREAKS.includes(node.tagName)) {
-				cursor++;
-			}
-
-			if (cursor === currentSlide) {
-				node.style.display = 'block';
-			} else {
-				node.style.display = 'none';
-			}
-		});
-		slideCount = cursor + 1;
+		slideView = presentation.slice(currentSlide - 1, currentSlide);
 	}
 
 	onMount(() => {
@@ -50,6 +22,11 @@
 	});
 
 	function showCurrentSlide(next = 0): void {
+		if (next < 1) {
+			next = 1;
+		} else if (next > presentation.length) {
+			next = presentation.length;
+		}
 		currentSlide = next;
 	}
 
@@ -60,30 +37,53 @@
 	function onNextClick() {
 		showCurrentSlide(currentSlide + 1);
 	}
+
+	function onKeyUp(evt: KeyboardEvent) {
+		const { key } = evt;
+		switch (key) {
+			case ' ': {
+				onNextClick();
+				break;
+			}
+			case 'ArrowLeft': {
+				onPreviousClick();
+				break;
+			}
+			case 'ArrowRight': {
+				onNextClick();
+				break;
+			}
+		}
+	}
 </script>
+
+<svelte:body on:keyup={onKeyUp} />
 
 <div class="slideshow">
 	<nav aria-label="Page navigation example" class="mt-3">
 		<ul class="pagination justify-content-center">
-			<li class="page-item" class:disabled={prevDisabled}>
-				<a class="page-link" href="#" tabindex="-1" aria-disabled="true" on:click={onPreviousClick}
-					>Previous</a
+			<li class="page-item border rounded-start" class:disabled={prevDisabled}>
+				<button class="btn btn-light" tabindex="-1" aria-disabled="true" on:click={onPreviousClick}
+					>Previous</button
 				>
 			</li>
-			<li class="page-item d-flex justify-content-around align-items-center">
+			<li
+				class="page-item d-flex justify-content-around align-items-center border-top border-bottom"
+			>
 				<div class="mx-3 mx-1">
-					{currentSlide + 1} of {slideCount}
+					{currentSlide} of {presentation?.length ?? 0}
 				</div>
 			</li>
-			<li class="page-item" class:disabled={nextDisabled}>
-				<a class="page-link" href="#" on:click={onNextClick}>Next</a>
+			<li class="page-item border rounded-end" class:disabled={nextDisabled}>
+				<button class="btn btn-light" on:click={onNextClick}>Next</button>
 			</li>
 		</ul>
 	</nav>
 
-	<div class="slides" bind:this={slides}>
-		<svelte:component this={presentation} />
-	</div>
+	<div />
+	{#each slideView as slide}
+		{@html slide.innerHTML}
+	{/each}
 </div>
 
 <style>

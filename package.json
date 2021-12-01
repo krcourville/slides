@@ -16,12 +16,13 @@
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-static": "^1.0.0-next.21",
 		"@sveltejs/kit": "next",
+		"@types/jsdom": "^16.2.13",
+		"@types/showdown": "^1.9.4",
 		"@typescript-eslint/eslint-plugin": "^4.31.1",
 		"@typescript-eslint/parser": "^4.31.1",
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
-		"mdsvex": "^0.9.8",
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0",
 		"svelte": "^3.44.0",
@@ -30,5 +31,8 @@
 		"tslib": "^2.3.1",
 		"typescript": "^4.4.3"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"showdown": "^1.9.1"
+	}
 }

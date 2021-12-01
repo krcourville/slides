@@ -35,6 +35,6 @@ A runbook can fullfill at least a few goals:
 
 ## References
 
-* https://www.pagerduty.com/resources/learn/what-is-a-runbook/
-* https://www.fool.com/the-blueprint/runbook/
-* https://wa.aws.amazon.com/wat.concept.runbook.en.html
+* [https://www.pagerduty.com/resources/learn/what-is-a-runbook/](https://www.pagerduty.com/resources/learn/what-is-a-runbook/)
+* [https://www.fool.com/the-blueprint/runbook/](https://www.fool.com/the-blueprint/runbook/)
+* [https://wa.aws.amazon.com/wat.concept.runbook.en.html](https://wa.aws.amazon.com/wat.concept.runbook.en.html)
