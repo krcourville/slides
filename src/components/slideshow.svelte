@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { scale } from 'svelte/transition';
 
 	export let presentation: HTMLDivElement[] = [];
 
@@ -80,10 +81,15 @@
 		</ul>
 	</nav>
 
-	<div />
-	{#each slideView as slide}
-		{@html slide.innerHTML}
-	{/each}
+	<div class="position-relative">
+		{#each slideView as presentationSlide}
+			{#key currentSlide}
+				<div transition:scale class="position-absolute top-0 start-0">
+					{@html presentationSlide.innerHTML}
+				</div>
+			{/key}
+		{/each}
+	</div>
 </div>
 
 <style>
