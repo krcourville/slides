@@ -11,7 +11,7 @@ A runbook can fullfill at least a few goals:
 
 ## Demo
 
-[Runbook for Aeon_Identity_Provider](https://git.yale.edu/Library-IT/Aeon_Identity_Provider/wiki/Runbook)
+[Runbook for Aeon_Identity_Provider](https://git.yale.edu/Library-IT/Aeon_Identity_Provider/wiki/SSO-Runbook)
 
 ### Caveats
 
