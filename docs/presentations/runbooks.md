@@ -7,18 +7,18 @@ A runbook can fullfill at least a few goals:
 1. Identify the existence of a service, why it was created, how it was implemented, and how to use it.
 2. Document the infrastructure of a service.
 3. Identity how to maintain the service.
-4. Serve as a starting point for troubleshooting incidents and allowing personnel to uninterrupted vacations.
+4. Serve as a starting point for troubleshooting incidents and allowing personnel to enjoy uninterrupted vacations.
 
 ## Demo
 
-[Runbook for Aeon_Identity_Provider](https://git.yale.edu/Library-IT/Aeon_Identity_Provider/wiki/Runbook)
+[Runbook for Aeon_Identity_Provider](https://git.yale.edu/Library-IT/Aeon_Identity_Provider/wiki/SSO-Runbook)
 
-### Caveats
+### Observations
 
-* Only accessible users of `git.yale.edu`.
-* Maybe should be accessible to all devs and dev ops and possibly also ITS personal, at least, in a read-only view.
-* Should be discoverable to enable people to fund services they can use or reuse ideas from.
-* Commonly used features such as table of content and tables can be cumbersome using Github Wiki.  Use of VS Code and extensions is helpful, but a more fully-featured browser-based GUI is ideal
+* Only accessible to users of `git.yale.edu`.
+* Seems discoverable. Can locate the runbook by searching for `sso runbook` and looking at `Wikis`.
+* Markdown-based: Commonly used features such as table of content and tables can be cumbersome using Github Wiki.  Use of VS Code and extensions is helpful, but a more fully-featured browser-based GUI may be ideal.
+* Is Wiki better? As opposed to a `docs` dir in the associated repository?
 
 ## Recommendations
 
